@@ -25,13 +25,15 @@ form.addEventListener("submit", function(evt){
     console.log(splitWord.length);
     console.log(splitWord[0]);
     const gridTotal = splitWord.length;
-    hangmanWord.value = "";
-         for (i=1; i<=gridTotal; i++){
+    hangmanWord.value = ""; // resets input box to entered word is not visible
+         for (i=0; i<gridTotal; i++){
            addSquare(i);
        } 
     function addSquare(i){
         const wordSquare = document.createElement("div");
         wordSquare.setAttribute("class", "square");
+        // wordSquare.setAttribute("innerText", `${splitWord[i]}`)
+        wordSquare.innerText = splitWord[i];
         document.querySelector("body").appendChild(wordSquare);
         console.log(wordSquare)
  
