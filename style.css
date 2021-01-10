@@ -7,7 +7,6 @@ div {
     }
 
 .box {
-    align-content: center;
     text-align: center;
     align-content: center;
     border: blue;
@@ -18,3 +17,11 @@ div {
     margin:3px;
 }
 
+.square {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: rgb(180, 165, 165);
+    margin: 5px;
+  
+}

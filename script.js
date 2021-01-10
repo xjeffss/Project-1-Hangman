@@ -16,3 +16,28 @@ function clicker(event){
     event.target.removeEventListener("click", clicker);
     console.log(event.target.innerText)
 }
+
+const form = document.querySelector('form');
+form.addEventListener("submit", function(evt){
+    evt.preventDefault()
+    let hangmanWord = document.getElementById("hangman-word");
+    let splitWord = hangmanWord.value.split("");
+    console.log(splitWord.length);
+    console.log(splitWord[0]);
+    const gridTotal = splitWord.length;
+    hangmanWord.value = "";
+         for (i=1; i<=gridTotal; i++){
+           addSquare(i);
+       } 
+    function addSquare(i){
+        const wordSquare = document.createElement("div");
+        wordSquare.setAttribute("class", "square");
+        document.querySelector("body").appendChild(wordSquare);
+        console.log(wordSquare)
+ 
+        }
+    })
+       
+       
+
+      
