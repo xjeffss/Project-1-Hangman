@@ -3,7 +3,6 @@ div {
     display:grid;
     grid-row: 5;
     width: 120px; 
-   
     }
 
 .box {
@@ -18,12 +17,13 @@ div {
 }
 
 .square {
-    text-align: center;
-    display: inline-block;
     width: 40px;
     height: 40px;
-    background: rgb(180, 165, 165);
+    border-bottom: 3px solid black;
+    text-align: center;
+    display: inline-block;
+    font-size: large;
+    background: rgb(255, 255, 255);
     color: rgb(165, 34, 34);
-    margin: 5px;
-  
+    margin: 2px;
 }

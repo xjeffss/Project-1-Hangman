@@ -17,6 +17,7 @@ function hangmanWordConvert(evt){
     const gridTotal = splitWord.length;
     hangmanWord.value = ""; // resets input box to entered word is not visible
     form.removeEventListener("submit", hangmanWordConvert);
+    evt.preventDefault();
 
     for (i=0; i<gridTotal; i++){
            addSquare(i);
@@ -39,17 +40,18 @@ function hangmanWordConvert(evt){
         bodyCounter++
     for (let i=0; i<splitWord.length; i++){
         if (
-            event.target.innerText == splitWord[i]
+            event.target.innerText == splitWord[i].toUpperCase()
         ){ 
-            bodyCounter--
-            console.log("yes")
+            console.log("yes");
+            bodyCounter--;
+            splitWord[i].color ="blue";
+          
         }
-        else{
+        else {
         
         } 
-    }console.log(bodyCounter)
+    } console.log(bodyCounter)
 // need to fix second word entry without reset
-// does not recognize upper vs lower case of the same
 //body counter works but decrements twice for 2 of the same letters
     }
     
