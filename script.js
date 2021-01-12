@@ -24,9 +24,13 @@ function hangmanWordConvert(evt){
        } 
     function addSquare(i){
         const wordSquare = document.createElement("div");
+        const subWordSquare = document.createElement("span");
+        subWordSquare.style.visibility = "hidden";
         wordSquare.setAttribute("class", "square");
         // wordSquare.setAttribute("innerText", `${splitWord[i]}`)
-        wordSquare.innerText = splitWord[i];
+        subWordSquare.innerText = splitWord[i];
+        wordSquare.appendChild(subWordSquare);
+
         document.querySelector("body").appendChild(wordSquare);
         console.log(wordSquare)
         }
@@ -38,19 +42,23 @@ function hangmanWordConvert(evt){
         event.target.removeEventListener("click", clicker);
         console.log(event.target.innerText)    
         bodyCounter++
+        let foundALetter = false;
+        const squares = document.querySelectorAll(".square")
     for (let i=0; i<splitWord.length; i++){
         if (
             event.target.innerText == splitWord[i].toUpperCase()
         ){ 
-            console.log("yes");
-            bodyCounter--;
-            splitWord[i].color ="blue";
-          
+            foundALetter = true;
+            squares[i].firstChild.style.visibility = "visible";
         }
         else {
         
-        } 
-    } console.log(bodyCounter)
+        }           
+        
+    } if (foundALetter) {
+        bodyCounter--
+    }
+    console.log(bodyCounter)
 // need to fix second word entry without reset
 //body counter works but decrements twice for 2 of the same letters
     }
