@@ -12,6 +12,9 @@ const rleg = document.getElementById("rleg");
 const reye = document.getElementById("reye");
 const leye = document.getElementById("leye");
 const mouthOpen = document.getElementById("mouthOpen");
+const reyeClosed = document.getElementById("reyeClosed");
+const leyeClosed = document.getElementById("leyeClosed");
+const mouthClosed = document.getElementById("mouthClosed");
 const wordBubble = document.getElementById("wordBubble");
 noose.style.visibility = "hidden";
 head.style.visibility = "hidden";
@@ -23,6 +26,9 @@ rleg.style.visibility = "hidden";
 reye.style.visibility = "hidden";
 leye.style.visibility = "hidden";
 mouthOpen.style.visibility = "hidden";
+reyeClosed.style.visibility = "hidden";
+leyeClosed.style.visibility = "hidden";
+mouthClosed.style.visibility = "hidden";
 wordBubble.style.visibility = "hidden";
 
 
@@ -109,10 +115,24 @@ function hangmanWordConvert(evt){
         leye.style.visibility = "visible";
         mouthOpen.style.visibility = "visible";
         wordBubble.style.visibility = "visible";
+        instructions.innerText = "YOU'RE DEAD";
+        for (let i=0; i<+splitWord.length; i++){
+            squares[i].firstChild.style.visibility = "visible";
+        }
+        setTimeout(function(){
+            reye.style.visibility = "hidden";
+            leye.style.visibility = "hidden";
+            mouthOpen.style.visibility = "hidden";
+            wordBubble.style.visibility = "hidden";
+            reyeClosed.style.visibility = "visible";
+            leyeClosed.style.visibility = "visible";
+            mouthClosed.style.visibility = "visible";
+
+        }, 3000)
     }
     }
     else {
-        instructions.innerText = "YOU'RE DEAD";
+        
     }
 // need to fix second word entry without reset
 // need to reveal puzzle
