@@ -55,7 +55,7 @@ function hangmanWordConvert(evt){
         subWordSquare.innerText = splitWord[i];
         wordSquare.appendChild(subWordSquare);
 
-        document.querySelector("body").appendChild(wordSquare);
+        document.querySelector(".guess").appendChild(wordSquare);
         console.log(wordSquare)
         }
     for (let i=0; i<boxClick.length; i++) {

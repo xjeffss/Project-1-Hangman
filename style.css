@@ -209,6 +209,15 @@ div {
     color: rgb(165, 34, 34);
     margin: 2px;
 }
+.h {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+.guess {
+    display: flex;
+}
 #reset {
     margin-right: 0px;
 }
