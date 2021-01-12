@@ -2,6 +2,29 @@ let instructions = document.querySelector(".instructions");
 console.log(instructions.innerText);
 
 const boxClick = document.getElementsByClassName("box");
+const noose = document.getElementById("noose");
+const head = document.getElementById("head");
+const body = document.getElementById("body");
+const larm = document.getElementById("larm");
+const rarm = document.getElementById("rarm");
+const lleg = document.getElementById("lleg");
+const rleg = document.getElementById("rleg");
+const reye = document.getElementById("reye");
+const leye = document.getElementById("leye");
+const mouthOpen = document.getElementById("mouthOpen");
+const wordBubble = document.getElementById("wordBubble");
+noose.style.visibility = "hidden";
+head.style.visibility = "hidden";
+body.style.visibility = "hidden";
+larm.style.visibility = "hidden";
+rarm.style.visibility = "hidden";
+lleg.style.visibility = "hidden";
+rleg.style.visibility = "hidden";
+reye.style.visibility = "hidden";
+leye.style.visibility = "hidden";
+mouthOpen.style.visibility = "hidden";
+wordBubble.style.visibility = "hidden";
+
 
 const randomWord = ["window", "scenario", "mobile", "fireplace", "morale", "source", "picture", "hardware", "cabinet", "courtesy"];
 
@@ -68,7 +91,7 @@ function hangmanWordConvert(evt){
 // need to reveal puzzle
 
     }
-    
+    console.log(bodyCounter)
 } 
        
 
