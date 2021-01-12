@@ -1,8 +1,9 @@
-const instructions = document.querySelector(".instructions");
-// winnerBlue.innerHTML = "Player 2 is the winner";
+let instructions = document.querySelector(".instructions");
 console.log(instructions.innerText);
 
 const boxClick = document.getElementsByClassName("box");
+
+const randomWord = ["window", "scenario", "mobile", "fireplace", "morale", "source", "picture", "hardware", "cabinet", "courtesy"];
 
 const form = document.querySelector('form');
 form.addEventListener("submit", hangmanWordConvert);
@@ -41,6 +42,7 @@ function hangmanWordConvert(evt){
         event.target.style.backgroundColor = "gray";
         event.target.removeEventListener("click", clicker);
         console.log(event.target.innerText)    
+    if (bodyCounter<8){   
         bodyCounter++
         let foundALetter = false;
         const squares = document.querySelectorAll(".square")
@@ -58,9 +60,13 @@ function hangmanWordConvert(evt){
     } if (foundALetter) {
         bodyCounter--
     }
-    console.log(bodyCounter)
+    console.log(bodyCounter)}
+    else {
+        instructions.innerText = "YOU'RE DEAD";
+    }
 // need to fix second word entry without reset
-//body counter works but decrements twice for 2 of the same letters
+// need to reveal puzzle
+
     }
     
 } 
