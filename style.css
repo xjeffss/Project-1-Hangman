@@ -6,6 +6,7 @@ div {
     display:inline-table;
     margin-bottom: 50px;
     width: 200px; 
+
     }
 #gallow {
     display:flexbox;
@@ -53,6 +54,81 @@ div {
    width: 30px;
    border-radius: 10px 10px 5px 5px;
 }
+#larm {
+    position: absolute;
+    background-color: rgb(85, 76, 76);
+    margin-top: 93px;
+    margin-left: 148px;
+    height: 70px;
+    width: 10px;
+    border-radius: 10px 0px 0px 0px;
+    transform: rotate(5deg);
+    border-right: 1px solid grey;
+
+}
+#rarm {
+    position: absolute;
+    background-color: rgb(85, 76, 76);
+    margin-top: 93px;
+    margin-left: 186px;
+    height: 70px;
+    width: 10px;
+    border-radius: 0px 10px 0px 0px;
+    transform: rotate(-5deg);
+    border-left: 1px solid gray;
+}
+#lleg {
+    position: absolute;
+    background-color: rgb(12, 4, 4);
+    margin-top: 147px;
+    margin-left: 157px;
+    height: 70px;
+    width: 17px;
+    transform: rotate(2deg);
+}
+
+#rleg {
+    position: absolute;
+    background-color: rgb(12, 4, 4);
+    margin-top: 147px;
+    margin-left: 171px;
+    height: 70px;
+    width: 17px;
+    transform: rotate(-2deg);
+    border-left: 1px solid gray;
+}
+#reye {
+    position: absolute;
+    margin-top: 70px;
+    margin-left: -36px;
+    height:3px;
+    width: 3px;
+    background-color: blue;
+    border-radius: 3px;
+    transform: rotate(20deg);
+}
+#leye {
+    position: absolute;
+    margin-top: 73px;
+    margin-left: -29px;
+    height:3px;
+    width: 3px;
+    background-color: blue;
+    border-radius: 3px;
+    transform: rotate(20deg);
+}
+
+#mouthOpen {
+    position: absolute;
+    margin-top: 80px;
+    margin-left: -39px;
+    height:4px;
+    width: 9px;
+    background-color: rgb(151, 49, 100);
+    border-radius: 3px;
+    transform: rotate(20deg);
+}
+
 .box {
     text-align: center;
     border: 1px solid blue;
@@ -65,7 +141,7 @@ div {
 }
 
 .square {
-    margin-top: 100px;
+    position: relative;
     width: 40px;
     height: 30px;
     border-bottom: 3px solid black;
