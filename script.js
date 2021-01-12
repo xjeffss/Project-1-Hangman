@@ -83,15 +83,43 @@ function hangmanWordConvert(evt){
     } if (foundALetter) {
         bodyCounter--
     }
-    console.log(bodyCounter)}
+    if (bodyCounter == 1){
+        noose.style.visibility = "visible";
+    }
+    if (bodyCounter == 2){
+        head.style.visibility = "visible";
+    }
+    if (bodyCounter == 3){
+        body.style.visibility = "visible";
+    }
+    if (bodyCounter == 4){
+        larm.style.visibility = "visible";
+    }
+    if (bodyCounter == 5){
+        rarm.style.visibility = "visible";
+    }
+    if (bodyCounter == 6){
+        lleg.style.visibility = "visible";
+    }
+    if (bodyCounter == 7){
+        rleg.style.visibility = "visible";
+    }
+    if (bodyCounter == 8){
+        reye.style.visibility = "visible";
+        leye.style.visibility = "visible";
+        mouthOpen.style.visibility = "visible";
+        wordBubble.style.visibility = "visible";
+    }
+    }
     else {
         instructions.innerText = "YOU'RE DEAD";
     }
 // need to fix second word entry without reset
 // need to reveal puzzle
+//need to kill bodyCounter on winner
 
     }
-    console.log(bodyCounter)
+
 } 
        
 
