@@ -33,9 +33,10 @@ wordBubble.style.visibility = "hidden";
 
 
 const randomWord = ["window", "scenario", "mobile", "fireplace", "morale", "source", "picture", "hardware", "cabinet", "courtesy"];
+let computerWord =  randomWord(Math.floor(Math.random()*randomWord.length));
 
 let form = document.querySelector('form');
-let computerWord =  
+
 form.addEventListener("submit", hangmanWordConvert);
 function hangmanWordConvert(evt){
     evt.preventDefault()
