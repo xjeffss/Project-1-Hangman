@@ -32,15 +32,15 @@ mouthClosed.style.visibility = "hidden";
 wordBubble.style.visibility = "hidden";
 
 
-const randomWord = ["window", "scenario", "mobile", "fireplace", "morale", "source", "picture", "hardware", "cabinet", "courtesy"];
-
+// const randomWord = ["window", "scenario", "mobile", "fireplace", "morale", "source", "picture", "hardware", "cabinet", "courtesy"];
+// let computerWord =  randomWord[Math.floor(Math.random()*randomWord.length)];
 const form = document.querySelector('form');
+
 form.addEventListener("submit", hangmanWordConvert);
 function hangmanWordConvert(evt){
     evt.preventDefault()
     let bodyCounter = 0;
     let hangmanWord = document.getElementById("hangman-word");
-    // const hangmanWordUC = hangmanWord.toUpperCase();
     let splitWord = hangmanWord.value.split("");
     // const splitWordUC = splitWord.upperCase();
     console.log(splitWord);
