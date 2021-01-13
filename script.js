@@ -32,7 +32,8 @@ mouthClosed.style.visibility = "hidden";
 wordBubble.style.visibility = "hidden";
 
 
-
+// const randomWord = ["window", "scenario", "mobile", "fireplace", "morale", "source", "picture", "hardware", "cabinet", "courtesy"];
+// let computerWord =  randomWord[Math.floor(Math.random()*randomWord.length)];
 const form = document.querySelector('form');
 
 form.addEventListener("submit", hangmanWordConvert);
@@ -67,7 +68,7 @@ function hangmanWordConvert(evt){
         boxClick[i].addEventListener("click", clicker); 
     }
     function clicker(event){
-        event.target.style.backgroundColor = "gray";
+        event.target.style.backgroundColor = "red";
         event.target.removeEventListener("click", clicker);
         console.log(event.target.innerText)    
     if (bodyCounter<8){   
