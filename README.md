@@ -5,7 +5,7 @@ I used a standard input to gather the hangman word and ".split" it into letters 
 
 The alphabet is layed out on the screen with with event listeners that activate when the letter is clicked.  It runs a "for" loop that reviews the letter through the hangman word.  I started a hangman bodyCount counter before the loop and subtracted from the counter if a letter was found.  If not the counter stayed +1 per guess.  At each increment of the bodyCount counter I added a CSS object representing the body to the screen.  When the counter reaches 8 I remove the for loop from the even listener and complete it as the user loses to reveal the word.
 
-Casey had some good tips for getting my formating lined up, getting the counter to only iterate down once if there were two of teh same letter.  He also recommendee the style.visibility option to keep the hangman word "hidden" until the letter was guessed, and recommended the timeout function to switch faces at the end
+Casey had some good tips for getting my formating lined up, getting the counter to only iterate down once if there were two of the same letter.  He also recommended the "style.visibility" option to keep the hangman word "hidden" until the letter was guessed, and recommended the timeout function to switch faces at the end
 
 Psuedocode
 Bronze
